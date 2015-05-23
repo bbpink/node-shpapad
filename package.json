@@ -1,0 +1,25 @@
+{
+  "name": "node-shpapad",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbpink/node-shpapad.git"
+  },
+  "author": "bbpink",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/bbpink/node-shpapad/issues"
+  },
+  "dependencies": {
+    "express": "*"
+    ,"forever": "*"
+    ,"levelup": "*"
+    ,"leveldown": "*"
+    ,"ect": "*"
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="/index.css" rel="stylesheet" />
+  <title>shpapad</title>
+</head>
+
+<body>
+  <div id="wrap">
+
+<% render("header.ssp", Map("op" -> op, "obj" -> obj)) %>
+
+<% render("menu.ssp", Map("op" -> op, "obj" -> obj)) %>
+
+<% render(op + ".ssp") %>
+
+<% render("footer.ssp") %>
+
+  </div>
+</body>
+
+</html>
