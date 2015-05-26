@@ -11,13 +11,11 @@
 <body>
   <div id="wrap">
 
-<% render("header.ssp", Map("op" -> op, "obj" -> obj)) %>
+<% include "header" %>
 
-<% render("menu.ssp", Map("op" -> op, "obj" -> obj)) %>
+<% include "menu" %>
 
-<% render(op + ".ssp") %>
-
-<% render("footer.ssp") %>
+<% include "footer" %>
 
   </div>
 </body>
