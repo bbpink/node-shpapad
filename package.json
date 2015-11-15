@@ -22,5 +22,8 @@
     ,"leveldown": "*"
     ,"ect": "*"
     ,"express-session": "*"
+    ,"body-parser": "*"
+    ,"level-multiply": "*"
+    ,"node-sass": "*"
   }
 }

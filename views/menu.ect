@@ -1,8 +1,9 @@
+<% if @menu.length != 0 : %>
     <nav id="mainmenu" class="clear">
       <ul>
       <% for v in @menu : %>
-        <li>obj.username</li>
-        <li><a href=""></a></li>
+        <li><a href="<%- v.href %>"><%- v.value %></a></li>
       <% end %>
       </ul>
     </nav>
+<% end %>

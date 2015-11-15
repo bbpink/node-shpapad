@@ -1,6 +1,8 @@
     <header>
-      <h1><a href="./">shpapad</a></h1>
-      <% if @logoutable : %>
-      <p id="logout"><a href="/logout">ログアウト</a></p>
-      <% end %>
+      <h1>
+        <a href="/"><img class="title" src="/shpapad-logo-w.png" alt="shpapad" /></a>
+        <% if @logoutable : %>
+        <a href="/logout"><img class="logout" src="/logout.png" alt="logout" /></a>
+        <% end %>
+      </h1>
     </header>

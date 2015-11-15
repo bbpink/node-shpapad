@@ -1,137 +1,90 @@
 @charset "utf-8";
-@import url("reset.css");
-
-/********** base **********/
 
 * {
-    font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Verdana, "ＭＳ Ｐゴシック", "MS PGothic", IPAPGothic, sans-serif;
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-.clear {
-    clear: both;
+@mixin main-wrapper() {
+  max-width: 960px;
+  margin: 0 auto;
 }
+
+a:link    { color: #333333; }
+a:visited { color: #555555; }
+a:hover   { color: #aaaaaa; }
+a:active  { color: #555555; }
 
 body {
-    font-size: 80%;
+  color: #333;
+
+  header {
+    width: 100%;
+    background-color: #555;
+    height: 40px;
+    border-bottom: #999;
+
+    h1 {
+      @include main-wrapper();
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a:nth-child(1) { height: 30px; }
+      a:nth-child(2) { height: 22px; }
+      img.title { height: 30px; }
+      img.logout { height: 22px; }
+    }
+  }
+
+  nav {
+    @include main-wrapper();
+    padding: 1em 0 0 2em;
+    border-bottom: 1px solid #ccc;
+    a { text-decoration: none; }
+
+    ul {
+      list-style-type: none;
+      li {
+        display: inline-block;
+        padding: 0 0 0 0.5em;
+      }
+    }
+  }
+
+  section {
+    @include main-wrapper();
+    padding: 1.5em 0 0 4em;
+
+    button {
+      margin-left: 0.5em;
+      font-size: 40%;
+      border: 1px solid #999;
+      padding: 3px 9px;
+      background-color: #eee;
+      border-radius: 3px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 0.3em;
+      }
+    }
+
+    ul.list li span {
+      margin-left: 0.2em;
+    }
+  }
+
+  footer {
+    @include main-wrapper();
+    clear: both;
     text-align: center;
-    background-color: #ffffff;
-}
-
-#wrap {
-    margin: 10px auto;
-    width: 800px;
-}
-
-a:link { color: #333333; }
-a:visited { color: #333333; }
-a:hover { color: #333333; }
-a:active { color: #333333; }
-
-/********** header **********/
-header {
-  display: block;
-  margin: 0 auto;
-  height: 3em;
-}
-
-header h1 {
-    cursor: pointer;
-    font-size: 2em;
-    float: left;
-    margin: 0px 0px 5px 0px;
-}
-
-#logout {
-  float: right;
-  padding: 1em;
-}
-
-/********** menu **********/
-#mainmenu {
-  margin: 0px auto;
-  width: 98%;
-  height: 1.7em;
-  border: 1px #bbbbbb solid;
-  background-color: #eeeeee;
-  border-radius: 8px;
-}
-
-#mainmenu ul {
-  margin: 0px 0px 0px 10px;
-  text-align: left;
-}
-
-#mainmenu ul li {
-  display: inline;
-  line-height: 1.7em;
-  margin: 0px 3px;
-}
-
-/********** content **********/
-#content {
-    float: left;
-    width: 95%;
-    margin: 10px 0px 10px 10px;
-    text-align: left;
-}
-
-#content h2 {
-    text-align: left;
-    color: #333333;
-    font-weight: bold;
-    letter-spacing: 0.4em;
-    padding: 2px;
-}
-
-#loginButton {
-  border: 1px #333333 solid;
-  width: 130px;
-  height: 70px;
-  text-align: center;
-}
-
-#loginButton a {
-  display: block;
-  line-height: 70px;
-  width: 100%;
-  font-size: 1.2em;
-  text-decoration: none;
-}
-
-#loginButton a:hover  { background-color: #eeeeee; }
-#loginButton a:active { background-color: #dddddd; line-height: 71px;}
-
-#content p {
-    margin: 5px 0px;
-}
-
-.arranging {
-    display: none;
-}
-
-#content ul {
-    margin: 10px;
-}
-
-#content ul li {
-    margin: 5px 0px 5px 2px;
-}
-
-#content ul li.plain {
-  list-style-type: none;
-}
-
-ul#finished {
-  margin: 40px 0px 0px 0px;
-  color: #aaaaaa;
-}
-
-ul#finished a:link { color: #999999; }
-ul#finished a:visited { color: #999999; }
-ul#finished a:hover { color: #999999; }
-ul#finished a:active { color: #999999; }
-
-/********** footer **********/
-footer {
-    margin: 0 auto;
+    margin-top: 2em;
+    font-size: 80%;
+  }
 }
