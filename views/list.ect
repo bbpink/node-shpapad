@@ -1,0 +1,9 @@
+<% extend "layout.ect" %>
+    <section id="content" class="clear">
+      <ul class="list">
+        <% for v in @lists : %>
+        <li id="<%- v.key %>" data-name="<%- v.name %>" data-count="<%- v.count %>"></li>
+        <% end %>
+      </ul>
+
+    </section>
