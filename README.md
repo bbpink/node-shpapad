@@ -1,15 +1,22 @@
 # node-shpapad
+  the simple list and task management using nodejs
+  [visit shpapad](http://shpapad.sevensenses.jp/ "shpapad")
 
-## schema
+## features
+- using Google openID connect for sign up/in
+- light weight
 
-### user
-- [key]id_token(hashed)
-- [value]""
+## requirements
+- Node.js 0.10 up
+- web server (ex.nginx)
+- Google Account
 
-### list
-- [key]id_token(hashed)!timestamp
-- [value]{name:"listname", count:taskCount}
+## opensource licenses
 
-## task
-- [key](id_token(hashed)!timestamp)(hashed)!timestamp
-- [value]"task"
+### SuperAgent
+(The MIT License)
+Copyright (c) 2014-2015 TJ Holowaychuk <tj@vision-media.ca>
+
+## copyright
+  &copy;2015- [bbpink](http://bbpink.sevensenses.jp "bbpink").
+  bbblog can be copied and changed under [The MIT License](https://opensource.org/licenses/MIT "The MIT License").
