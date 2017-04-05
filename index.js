@@ -55,7 +55,7 @@ app.get("/login", function(req, res) {
         client_id: OAUTH_CLIENTID
       , response_type: "code"
       , scope: "openid"
-      , redirect_uri: "http://shpapad.sevensenses.jp/oauth2callback"
+      , redirect_uri: "https://shpapad.sevensenses.jp/oauth2callback"
       , state: req.session.oauthState
     };
     res.render("login", { menu: [], logoutable: false, oauth: oauthParameter });
@@ -86,7 +86,7 @@ app.get("/oauth2callback", function(req, res) {
       }
 
       //get user information from google with OpenID-Connect
-      var parameters = qs.stringify({"code":req.query["code"], "client_id":OAUTH_CLIENTID, "client_secret":OAUTH_SECRET, "redirect_uri":"http://shpapad.sevensenses.jp/oauth2callback", "grant_type":"authorization_code"});
+      var parameters = qs.stringify({"code":req.query["code"], "client_id":OAUTH_CLIENTID, "client_secret":OAUTH_SECRET, "redirect_uri":"https://shpapad.sevensenses.jp/oauth2callback", "grant_type":"authorization_code"});
       var options = {hostname:"accounts.google.com", port:443, path:"/o/oauth2/token", method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}};
       var request = https.request(options, function(response) {
         var d = "";
