@@ -11,9 +11,9 @@ var levelMultiply = require("level-multiply");
 var sass = require("node-sass");
 
 //constants
-var SESSION_SECRET = "shpapad";
-var OAUTH_CLIENTID = "clientid";
-var OAUTH_SECRET = "secret";
+var SESSION_SECRET = process.env.SHPAPAD_SESSION_SECRET;
+var OAUTH_CLIENTID = process.env.SHPAPAD_OAUTH_CLIENTID;
+var OAUTH_SECRET = process.env.SHPAPAD_OAUTH_CLIENTSECRET;
 
 //environments
 var app = express();
