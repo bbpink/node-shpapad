@@ -6,6 +6,7 @@ var crypto = require("crypto");
 var https = require("https");
 var qs = require("querystring");
 var levelup = require("levelup");
+var leveldown = require("leveldown");
 var bodyParser = require("body-parser");
 var levelMultiply = require("level-multiply");
 var sass = require("node-sass");
@@ -17,7 +18,7 @@ var OAUTH_SECRET = process.env.SHPAPAD_OAUTH_CLIENTSECRET;
 
 //environments
 var app = express();
-var rawdb = levelup("./data/db/shpapad_db");
+var rawdb = levelup(leveldown("./data/db/shpapad_db"));
 var db = levelMultiply(rawdb);
 var ectRenderer = ECT({ watch: true, root: __dirname + '/views', ext : '.ect'});
 app.set('view engine', 'ect');
